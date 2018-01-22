@@ -16,6 +16,12 @@ public interface AdvancedCalculatorVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitProgram(AdvancedCalculatorParser.ProgramContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link AdvancedCalculatorParser#statment}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitStatment(AdvancedCalculatorParser.StatmentContext ctx);
+	/**
 	 * Visit a parse tree produced by the {@code parens}
 	 * labeled alternative in {@link AdvancedCalculatorParser#expression}.
 	 * @param ctx the parse tree
@@ -30,6 +36,13 @@ public interface AdvancedCalculatorVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitNum(AdvancedCalculatorParser.NumContext ctx);
 	/**
+	 * Visit a parse tree produced by the {@code variable}
+	 * labeled alternative in {@link AdvancedCalculatorParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitVariable(AdvancedCalculatorParser.VariableContext ctx);
+	/**
 	 * Visit a parse tree produced by the {@code addSub}
 	 * labeled alternative in {@link AdvancedCalculatorParser#expression}.
 	 * @param ctx the parse tree
@@ -43,4 +56,10 @@ public interface AdvancedCalculatorVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitMulDiv(AdvancedCalculatorParser.MulDivContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link AdvancedCalculatorParser#assignment}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitAssignment(AdvancedCalculatorParser.AssignmentContext ctx);
 }

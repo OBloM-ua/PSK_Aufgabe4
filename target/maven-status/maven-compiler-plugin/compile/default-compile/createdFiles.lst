@@ -10,6 +10,7 @@ AdvancedCalculatorParser$AddSubContext.class
 CalculatorParser$AddSubContext.class
 AdvancedCalculatorVisitorImpl.class
 AdvancedCalculatorParser$MulDivContext.class
+AdvancedCalculatorParser$StatmentContext.class
 CalculatorBaseListener.class
 AdvancedCalculatorParser.class
 CalculatorParser$ParensContext.class
@@ -20,8 +21,10 @@ AdvancedCalculatorBaseListener.class
 AdvancedCalculatorParser$ParensContext.class
 Calculator.class
 AdvancedCalculatorBaseVisitor.class
+AdvancedCalculatorParser$VariableContext.class
 AdvancedCalculatorLexer.class
 CalculatorListener.class
 AdvancedCalculatorParser$ProgramContext.class
 AdvancedCalculator.class
+AdvancedCalculatorParser$AssignmentContext.class
 CalculatorVisitorImpl.class

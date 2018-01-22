@@ -27,6 +27,18 @@ public class AdvancedCalculatorBaseListener implements AdvancedCalculatorListene
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterStatment(AdvancedCalculatorParser.StatmentContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitStatment(AdvancedCalculatorParser.StatmentContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterParens(AdvancedCalculatorParser.ParensContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -51,6 +63,18 @@ public class AdvancedCalculatorBaseListener implements AdvancedCalculatorListene
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterVariable(AdvancedCalculatorParser.VariableContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitVariable(AdvancedCalculatorParser.VariableContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterAddSub(AdvancedCalculatorParser.AddSubContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -70,6 +94,18 @@ public class AdvancedCalculatorBaseListener implements AdvancedCalculatorListene
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitMulDiv(AdvancedCalculatorParser.MulDivContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterAssignment(AdvancedCalculatorParser.AssignmentContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitAssignment(AdvancedCalculatorParser.AssignmentContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

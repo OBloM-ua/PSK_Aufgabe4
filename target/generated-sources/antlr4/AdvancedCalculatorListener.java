@@ -17,6 +17,16 @@ public interface AdvancedCalculatorListener extends ParseTreeListener {
 	 */
 	void exitProgram(AdvancedCalculatorParser.ProgramContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link AdvancedCalculatorParser#statment}.
+	 * @param ctx the parse tree
+	 */
+	void enterStatment(AdvancedCalculatorParser.StatmentContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link AdvancedCalculatorParser#statment}.
+	 * @param ctx the parse tree
+	 */
+	void exitStatment(AdvancedCalculatorParser.StatmentContext ctx);
+	/**
 	 * Enter a parse tree produced by the {@code parens}
 	 * labeled alternative in {@link AdvancedCalculatorParser#expression}.
 	 * @param ctx the parse tree
@@ -41,6 +51,18 @@ public interface AdvancedCalculatorListener extends ParseTreeListener {
 	 */
 	void exitNum(AdvancedCalculatorParser.NumContext ctx);
 	/**
+	 * Enter a parse tree produced by the {@code variable}
+	 * labeled alternative in {@link AdvancedCalculatorParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterVariable(AdvancedCalculatorParser.VariableContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code variable}
+	 * labeled alternative in {@link AdvancedCalculatorParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitVariable(AdvancedCalculatorParser.VariableContext ctx);
+	/**
 	 * Enter a parse tree produced by the {@code addSub}
 	 * labeled alternative in {@link AdvancedCalculatorParser#expression}.
 	 * @param ctx the parse tree
@@ -64,4 +86,14 @@ public interface AdvancedCalculatorListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitMulDiv(AdvancedCalculatorParser.MulDivContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link AdvancedCalculatorParser#assignment}.
+	 * @param ctx the parse tree
+	 */
+	void enterAssignment(AdvancedCalculatorParser.AssignmentContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link AdvancedCalculatorParser#assignment}.
+	 * @param ctx the parse tree
+	 */
+	void exitAssignment(AdvancedCalculatorParser.AssignmentContext ctx);
 }

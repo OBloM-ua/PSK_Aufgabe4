@@ -4,6 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class AdvancedCalculatorVisitorImpl extends AdvancedCalculatorBaseVisitor<BigDecimal> {
+
+    private Map<String, BigDecimal> variables = new HashMap<>();
+
     @Override
     public BigDecimal visitNum(AdvancedCalculatorParser.NumContext ctx) {
         return new BigDecimal(ctx.NUMBER().getText());
@@ -36,7 +39,21 @@ public class AdvancedCalculatorVisitorImpl extends AdvancedCalculatorBaseVisitor
         }
     }
 
-    // TODO Implementieren sie die fehlenden Methoden (Sie brauchen einen Speicher um den aktuellen Wert der Variablen
+    @Override
+    public BigDecimal visitVariable(AdvancedCalculatorParser.VariableContext ctx) {
+        String key = ctx.IDENTIFIER().getText();
+        if (variables.containsKey(key))        return variables.get(key);
+        else return BigDecimal.valueOf(0);
+    }
+
+    @Override // t = 4
+    public BigDecimal visitAssignment(AdvancedCalculatorParser.AssignmentContext ctx) {
+        String key = ctx.IDENTIFIER().getText();
+        BigDecimal val = new BigDecimal(ctx.getChild(2).getText());
+        variables.put(key, val);
+        return val;
+    }
+// TODO Implementieren sie die fehlenden Methoden (Sie brauchen einen Speicher um den aktuellen Wert der Variablen
     // TODO ablegen zu können - wählen Sie dazu eine entsprechende Datenstruktur).
 
 
