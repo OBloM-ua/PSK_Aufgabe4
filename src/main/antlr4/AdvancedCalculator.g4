@@ -12,7 +12,7 @@ grammar AdvancedCalculator;
 program     : statment+;
 
 statment    : assignment NEWLINE
-            | expression
+            | expression+
             ;
 
 
@@ -30,7 +30,7 @@ assignment: IDENTIFIER '=' expression;
 NUMBER  :   DIGIT* '.' DIGIT+
         |   DIGIT+
         ;
-IDENTIFIER: [a-zA-Z][a-zA-Z0-9]* ;
+IDENTIFIER: [a-z][a-zA-Z0-9]* ;
 DIGIT   :   [0-9];
 NEWLINE :   '\r'? '\n' ;
 WS      :   [ \t]+ -> skip

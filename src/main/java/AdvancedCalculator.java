@@ -10,7 +10,7 @@ public class AdvancedCalculator {
     public static void main(String[] args) throws IOException {
 //        System.out.println(runProgram("test.txt"));
         System.out.println(runProgram("program1.txt"));
-        System.out.println(runProgram("program2.txt"));
+//        System.out.println(runProgram("program2.txt"));
     }
 
     private static BigDecimal runProgram(String filename) throws IOException {
